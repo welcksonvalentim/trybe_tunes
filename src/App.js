@@ -50,6 +50,11 @@ class App extends React.Component {
     });
   }
 
+  /*   exibitName = async () => {
+    const { test } = this.state;
+    if (test === true) console.log('test');
+  } */
+
   render() {
     const { name, buttonSubmit, load, test } = this.state;
     return (
@@ -79,7 +84,7 @@ class App extends React.Component {
           <Route path="/search" component={ Search } />
           <Route path="/album/:id" component={ Album } />
           <Route path="/favorites" component={ Favorites } />
-          <Route path="/profile" component={ Profile } />
+          <Route exact path="/profile" component={ Profile } />
           <Route path="/profile/edit" component={ ProfileEdit } />
           <Route exact path="*" component={ NotFound } />
         </Switch>
