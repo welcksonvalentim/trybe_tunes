@@ -50,11 +50,6 @@ class App extends React.Component {
     });
   }
 
-  /*   exibitName = async () => {
-    const { test } = this.state;
-    if (test === true) console.log('test');
-  } */
-
   render() {
     const { name, buttonSubmit, load, test } = this.state;
     return (
@@ -76,7 +71,7 @@ class App extends React.Component {
           </Route>
           <Route
             exact
-            path="/Load"
+            path="/load"
             render={ () => (<Load
               load={ load }
             />) }
