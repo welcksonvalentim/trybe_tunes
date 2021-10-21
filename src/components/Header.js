@@ -6,7 +6,6 @@ class Header extends React.Component {
   constructor() {
     super();
     this.state = {
-      loading: true,
       name: '',
     };
   }
@@ -38,11 +37,11 @@ class Header extends React.Component {
         {nameLoad && <h4 data-testid="header-user-name">{ name }</h4>}
         <nav>
           <ul>
-            <li><Link to="/search">Search</Link></li>
-            <li><Link to="/album/:id">Album</Link></li>
-            <li><Link to="/favorites">Favorites</Link></li>
-            <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/profile/edit">ProfileEdit</Link></li>
+            <Link to="/search" data-testid="link-to-search">Search</Link>
+            <Link to="/album/:id">Album</Link>
+            <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
+            <Link to="/profile" data-testid="link-to-profile">Profile</Link>
+            <Link to="/profile/edit">ProfileEdit</Link>
           </ul>
         </nav>
       </header>
