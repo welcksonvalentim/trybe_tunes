@@ -22,10 +22,9 @@ class App extends React.Component {
   }
 
   onInputChange = ({ target }) => {
-    const { name, nameSinger } = target;
+    const { name } = target;
     this.setState({
       [name]: target.value,
-      [nameSinger]: target.value,
     }, this.validationInputs);
   }
 
