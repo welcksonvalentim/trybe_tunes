@@ -26,16 +26,15 @@ class Search extends React.Component {
       name: singerName,
     });
     const listOfAlbuns = await searchAlbumsAPI(singerName);
+    getId.value = '';
     if (listOfAlbuns[0] !== undefined) {
       this.setState({
         name: singerName,
         albuns: listOfAlbuns,
       });
-      getId.value = '';
     } else {
-      getId.value = '';
       this.setState({
-        name: '',
+        name: singerName,
       });
     }
   }
@@ -47,18 +46,18 @@ class Search extends React.Component {
       <div
         data-testid="page-search"
       >
-        <h1>{ resultSinger }</h1>
         {albuns.length === 0 ? <h3>Nenhum álbum foi encontrado</h3>
-        : albuns.map((album) => (
-          <div key={ album.collectionId }>
-            <Link
-              to={ `/album/${album.collectionId}` }
-              data-testid={ `link-to-album-${album.collectionId}` }
-            />
-            <h3 key={ album.artistId }>{ album.artistId }</h3>
-            <h3 key={ album.collectionName }>{ album.collectionName }</h3>
-            <h3 key={ album.artistName }>{ album.artistName }</h3>
-          </div>))}
+          : albuns.map((album) => (
+            <div key={ album.collectionId }>
+              <Link
+                to={ `/album/${album.collectionId}` }
+                data-testid={ `link-to-album-${album.collectionId}` }
+              >
+                {album.collectionId}
+              </Link>
+              <h3 key={ album.collectionName }>{ album.collectionName }</h3>
+              <h3 key={ album.artistName }>{ album.artistName }</h3>
+            </div>))}
         <Header />
         <form>
           <label
@@ -87,6 +86,7 @@ class Search extends React.Component {
             />
           </label>
         </form>
+        {name !== '' ? <h1>{ resultSinger }</h1> : ''}
       </div>
     );
   }
