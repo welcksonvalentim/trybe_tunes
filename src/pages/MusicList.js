@@ -38,6 +38,7 @@ class MusicList extends React.Component {
           data-testid="page-album"
           key={ nameArtist }
         >
+
           {allInformation !== undefined && allInformation.map((track) => (
             track.previewUrl !== undefined && (
               <MusicCard
