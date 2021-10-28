@@ -56,12 +56,12 @@ class Album extends React.Component {
       const { nameArtist, nameAlbum, checkedDSong, getCheckedSong } = this.state;
       return (
         <div
-          data-testid="page-album"
           key={ nameArtist }
         >
           <Header />
           {nameArtist !== undefined ? (
             <div
+              data-testid="page-album"
               key={ nameArtist + nameAlbum }
             >
               <h3 key={ nameArtist } data-testid="artist-name">{nameArtist}</h3>

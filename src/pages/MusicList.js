@@ -35,7 +35,6 @@ class MusicList extends React.Component {
       const { getCheckedSong } = this.props;
       return (
         <div
-          data-testid="page-album"
           key={ nameArtist }
         >
 
