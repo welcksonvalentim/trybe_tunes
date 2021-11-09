@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 import Load from './pages/Load';
 import { createUser } from './services/userAPI';
 import './App.css';
+import Head from './Head';
 
 class App extends React.Component {
   constructor() {
@@ -54,7 +55,7 @@ class App extends React.Component {
     const { name, buttonSubmit, load, test } = this.state;
     return (
       <BrowserRouter>
-        <p>TrybeTunes</p>
+        <Head />
         <Switch>
           <Route
             exact

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
+import '../pagesCSS/Header.css';
 
 class Header extends React.Component {
   constructor() {
@@ -33,10 +34,19 @@ class Header extends React.Component {
       <header
         data-testid="header-component"
       >
-        {loading && <h2>Carregando...</h2>}
-        {nameLoad && <h4 data-testid="header-user-name">{ name }</h4>}
+        {loading && <h4 className="loading">Carregando...</h4>}
+        {nameLoad
+        && (
+          <h4
+            data-testid="header-user-name"
+            className="nameUser"
+          >
+            Usuário:
+            { name }
+          </h4>
+        )}
         <nav>
-          <ul>
+          <ul className="linksToPages">
             <Link to="/search" data-testid="link-to-search">Search</Link>
             <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
             <Link to="/profile" data-testid="link-to-profile">Profile</Link>
