@@ -1,0 +1,26 @@
+* {
+  margin: 0 px;
+}
+
+.search {
+  margin: 10px;
+}
+
+.inputSearch {
+  background-color: rgb(245, 235, 235);
+  font-weight: 600;
+  width: 250px;
+  border-radius: 2%;
+  height: 20px;
+  margin: 10px;
+}
+
+.inputButtonSearch {
+  height: 20px;
+  background-color: #3232c0;
+}
+
+.cardAlbum {
+  display: flex;
+  width: 200 px;
+}
