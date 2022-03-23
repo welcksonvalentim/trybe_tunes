@@ -42,7 +42,7 @@ class Search extends React.Component {
 
   render() {
     const { buttonSubmitSinger, name, albuns } = this.state;
-    const resultSinger = `Resultado de álbuns de: ${name}`;
+    const resultSinger = `Result of album name: ${name}`;
     return (
       <div
         data-testid="page-search"
@@ -57,7 +57,7 @@ class Search extends React.Component {
               className="inputSearch"
               data-testid="search-artist-input"
               type="text"
-              placeholder="Digite o albúm ou cantor"
+              placeholder="Type singer or album name"
               name="nameSinger"
               required
               id="idSinger"
@@ -73,7 +73,7 @@ class Search extends React.Component {
               type="button"
               name="buttonSubmitSinger"
               required
-              value="Pesquisar"
+              value="Search"
               disabled={ buttonSubmitSinger }
               onClick={ this.onClickSinger }
             />
@@ -85,6 +85,7 @@ class Search extends React.Component {
             : (
               <div key={ album.collectionId } className="cardAlbum">
                 <Link
+                  className="card"
                   to={ `/album/${album.collectionId}` }
                   data-testid={ `link-to-album-${album.collectionId}` }
                 >

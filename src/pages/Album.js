@@ -3,6 +3,7 @@ import MusicList from './MusicList';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../pagesCSS/Album.css';
 
 class Album extends React.Component {
   constructor() {
@@ -61,6 +62,7 @@ class Album extends React.Component {
           <Header />
           {nameArtist !== undefined ? (
             <div
+              className="album"
               data-testid="page-album"
               key={ nameArtist + nameAlbum }
             >

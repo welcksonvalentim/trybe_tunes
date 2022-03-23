@@ -1,0 +1,13 @@
+.musicCard {
+  align-items: center;
+  border: 1px solid #9a9a9c;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.musicCard h4 {
+  margin-left: 5px;
+}

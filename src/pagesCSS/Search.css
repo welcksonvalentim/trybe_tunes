@@ -1,26 +1,48 @@
-* {
-  margin: 0 px;
-}
-
 .search {
   margin: 10px;
 }
 
 .inputSearch {
-  background-color: rgb(245, 235, 235);
+  background-color: rgb(233, 227, 227);
+  border-radius: 10px;
   font-weight: 600;
-  width: 250px;
-  border-radius: 2%;
-  height: 20px;
+  height: 25px;
   margin: 10px;
+  width: 250px;
 }
 
 .inputButtonSearch {
-  height: 20px;
-  background-color: #3232c0;
+  background-color: #1d1d1f;
+  border-radius: 5px;
+  color: rgb(233, 227, 227);
+  font-family: sans-serif;
+  font-weight: 600;
+  height: 25px;
+  width: 150px;
+}
+
+.inputButtonSearch:disabled {
+  background-color: #9a9a9c;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: 600;
+  width: 150px;
 }
 
 .cardAlbum {
   display: flex;
-  width: 200 px;
+  margin: 10px;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.card img {
+  height: 70px;
+  margin-left: 5px;
 }

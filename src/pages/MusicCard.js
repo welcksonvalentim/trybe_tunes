@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { addSong } from '../services/favoriteSongsAPI';
+import '../pagesCSS/MusicCard.css';
 
 class MusicCard extends React.Component {
   constructor() {
@@ -27,11 +28,11 @@ class MusicCard extends React.Component {
     }
 
     render() {
-      const { track, getCheckedSong } = this.props;
-      const { checkbox, loadFavoritesong } = this.state;
-      if (loadFavoritesong.length) return <p>{loadFavoritesong}</p>;
+      const { track } = this.props;
+      const { loadFavoritesong } = this.state;
+      if (loadFavoritesong !== '') return <p>{loadFavoritesong}</p>;
       return (
-        <div>
+        <div className="musicCard">
           <h4>{ track.trackName }</h4>
           <audio
             data-testid="audio-component"
@@ -43,22 +44,6 @@ class MusicCard extends React.Component {
             O seu navegador não suporta o elemento
             <code>audio</code>
           </audio>
-          <label
-            htmlFor={ track.trackId }
-            key={ track.trackId }
-          >
-            Favorita
-            <input
-              data-testid={ `checkbox-music-${track.trackId}` }
-              id={ track.trackId }
-              type="checkbox"
-              name="checkbox"
-              onChange={ (e) => this.checkFavoriteMusic(e, track) }
-              checked={ getCheckedSong.length ? getCheckedSong.some(
-                (song) => song.trackId === track.trackId,
-              ) : checkbox }
-            />
-          </label>
         </div>
       );
     }
@@ -66,7 +51,6 @@ class MusicCard extends React.Component {
 
 MusicCard.propTypes = {
   track: PropTypes.objectOf(PropTypes.string).isRequired,
-  getCheckedSong: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default MusicCard;

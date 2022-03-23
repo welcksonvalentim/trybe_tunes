@@ -19,7 +19,7 @@ class Login extends React.Component {
               data-testid="login-name-input"
               className="input-name"
               type="text"
-              placeholder="Digite seu nome"
+              placeholder="Digite seu nome completo"
               name="name"
               required
               value={ name }

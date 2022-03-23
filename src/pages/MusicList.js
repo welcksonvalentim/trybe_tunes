@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import getMusics from '../services/musicsAPI';
 import MusicCard from './MusicCard';
+import '../pagesCSS/MusicList.css';
 
 class MusicList extends React.Component {
   constructor() {
@@ -35,9 +36,9 @@ class MusicList extends React.Component {
       const { getCheckedSong } = this.props;
       return (
         <div
+          className="musicList"
           key={ nameArtist }
         >
-
           {allInformation !== undefined && allInformation.map((track) => (
             track.previewUrl !== undefined && (
               <MusicCard

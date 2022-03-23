@@ -1,16 +1,27 @@
-* {
-  margin: 0;
+.header {
+  background-color: #1d1d1f;
+  color: rgb(233, 227, 227);
+  display: flex;
+  justify-content: space-between;
 }
 
 .title-Header {
-  background-color: #1D1D1F;
-  color: #FFF;
-  font-weight: 600;
-  height: 50px;
-  display: flex;
   align-items: center;
+  display: flex;
+  font-family: sans-serif;
+  font-weight: 600;
   justify-content: center;
   margin-bottom: 25px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nameUser {
+  font-family: sans-serif;
+  font-weight: 600;
+  margin: 10px;
+  text-align: end;
+}
+
+.fone {
+  margin: 5px;
+  width: 70px;
 }
